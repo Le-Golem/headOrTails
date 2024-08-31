@@ -92,7 +92,7 @@ export default function Home() {
           >
             <option value="" disabled>Sélectionnez une personne</option>
             {playerList
-              .filter((player) => player.id !== firstPerson?.id) // Exclure la première personne sélectionnée
+              .filter((player) => player.id !== firstPerson?.id)
               .map((player) => (
                 <option key={player.id} value={player.id}>
                   {player.name}
@@ -101,7 +101,7 @@ export default function Home() {
           </select>
         </div>
         <div className='border-2 p-4 rounded-xl mt-6'>
-         <button onClick={startPlayFunction}>Random</button>
+         <button onClick={startPlayFunction}>X</button>
         </div>
       </section>
 
@@ -122,19 +122,6 @@ export default function Home() {
           </article>
         }
       </section>
-
-            {/* 
-              <section className='bg-sky-900 w-11/12 h-32  mt-8'>
-                <div className='flex justify-center items-center'>
-                <p style={{color : "black"}}>{personChoice} choisis pile ou face</p>
-                </div>
-                <div className='flex gap-8 w-screen justify-center mt-8' >
-                  <button onClick={() => checkWin(0)} style={{color : "black"}}>pile</button>
-                  <button onClick={() => checkWin(1)} style={{color : "black"}}>face</button>
-                </div>
-                {headOrTailsResult != "" && <p style={{color : "black"}} className='flex justify-center items-center' >{headOrTailsResult}</p>} 
-              </section>
-            } */}
     </article>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getRandomNumber } from './utils';  // Assurez-vous que cette fonction est correctement définie et importée
+import { getRandomNumber } from './utils'; 
 
 const playerList = [
   { name: 'Alexis', id: 0 },
@@ -23,7 +23,7 @@ export default function Home() {
     const selectedPerson = playerList.find((player) => player.id === selectedId);
     setFirstPerson(selectedPerson);
     if (selectedPerson?.id === secondPerson?.id) {
-      setSecondPerson(undefined);  // Réinitialiser le second choix s'il est égal au premier
+      setSecondPerson(undefined);
     }
   };
 
@@ -63,7 +63,7 @@ export default function Home() {
   }, [firstPerson, secondPerson]);
 
   return (
-    <article className='bg-sky-900 w-screen h-screen flex flex-col justify-center items-center overflow-hidden'>
+    <article style={{overflow : "hidden"}} className='bg-sky-900 w-screen h-screen flex flex-col justify-center items-center'>
       <section className='w-screen h-32 pt-4 pb-4 flex items-center justify-center'>
         <h1 className="text-7xl" style={{ fontFamily: 'Montserrat, sans-serif' }}>Pile ou face</h1>
       </section>

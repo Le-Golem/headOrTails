@@ -7,8 +7,8 @@ const playerList = [
   { name: 'Alexis', id: 0 },
   { name: 'Cédric', id: 1 },
   { name: 'Malcolm', id: 2 },
-  { name: 'Maxime', id: 3 },
-  { name: 'Romane', id: 4 },
+  { name: 'Maxime', id: 3 }
+  //{ name: 'Romane', id: 4 },
 ];
 
 export default function Home() {
@@ -63,7 +63,7 @@ export default function Home() {
   }, [firstPerson, secondPerson]);
 
   return (
-    <article className='bg-sky-900 w-screen h-screen flex flex-col justify-center items-center'>
+    <article className='bg-sky-900 w-screen h-screen flex flex-col justify-center items-center overflow-hidden'>
       <section className='w-screen h-32 pt-4 pb-4 flex items-center justify-center'>
         <h1 className="text-7xl" style={{ fontFamily: 'Montserrat, sans-serif' }}>Pile ou face</h1>
       </section>

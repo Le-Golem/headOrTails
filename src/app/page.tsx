@@ -63,7 +63,7 @@ export default function Home() {
   }, [firstPerson, secondPerson]);
 
   return (
-    <article className='bg-sky-900 w-screen h-screen'>
+    <article className='bg-sky-900 w-screen h-screen flex flex-col justify-center items-center'>
       <section className='w-screen h-32 pt-4 pb-4 flex items-center justify-center'>
         <h1 className="text-7xl" style={{ fontFamily: 'Montserrat, sans-serif' }}>Pile ou face</h1>
       </section>
